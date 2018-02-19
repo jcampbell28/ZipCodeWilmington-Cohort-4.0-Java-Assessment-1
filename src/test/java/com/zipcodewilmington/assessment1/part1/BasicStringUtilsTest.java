@@ -68,7 +68,7 @@ public class BasicStringUtilsTest {
         String expected = "The QUIck BRoWn";
 
         // When
-        String actual = BasicStringUtils.invertCasing(input);
+        String actual = BasicStringUtils.invertCasing(expected);
 
         // Then
         Assert.assertEquals(expected, actual);
