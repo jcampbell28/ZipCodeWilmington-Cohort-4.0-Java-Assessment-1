@@ -4,6 +4,8 @@ import com.zipcodewilmington.assessment1.UnitTestingUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -30,7 +32,7 @@ public class ArrayUtilsTest {
         Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
 
         // When
-        Integer[] actual = (Integer[]) ArrayUtils.removeValue(inputArray, valueToRemove);
+        ArrayList<Integer> actual = ArrayUtils.removeValue(inputArray, valueToRemove);
 
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);

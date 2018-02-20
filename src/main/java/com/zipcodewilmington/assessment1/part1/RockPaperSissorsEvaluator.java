@@ -62,7 +62,7 @@ public class RockPaperSissorsEvaluator {
         if (handSignOfPlayer2.equals("paper") && handSignOfPlayer1.equals("rock")) {
             return "paper";
         }else {
-            return null;
+            return "rock";
         }
     }
 }

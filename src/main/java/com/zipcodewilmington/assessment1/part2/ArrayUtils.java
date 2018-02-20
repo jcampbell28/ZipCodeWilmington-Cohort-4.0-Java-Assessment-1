@@ -1,9 +1,6 @@
 package com.zipcodewilmington.assessment1.part2;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 /**
  * Created by leon on 2/16/18.
@@ -33,29 +30,15 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array
      * of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-//        ArrayList<Object[]> arrList = new ArrayList<>();
-//        for (int i = 0; i < objectArray.length; i++){
-//            if (arrList.equals(objectToRemove)){
-//                arrList.remove(objectToRemove);
-//            }
-//        }
-//        return (Object[]) arrList.toArray();
-  //      return arrList.toArray(new Object[(arrList.size())]);
-   //     return array;
-        int newArrSize = objectArray.length - getNumberOfOccurrences(objectArray, objectToRemove);
-        Object[] resultArray = new Object[newArrSize];
-        int newArrayI = 0;
-
-        for (int i = 0; i < objectArray.length; i++){
-            if (objectArray[i].equals(objectToRemove)){
-                newArrayI++;
-            } else {
-                resultArray [i-newArrayI] = objectArray[i];
+    public static ArrayList<Integer> removeValue(Integer[] objectArray, Integer objectToRemove) {
+        ArrayList<Integer> result = new ArrayList<>();
+        //Integer occur = getNumberOfOccurrences(objectArray, objectToRemove);
+        for (int i = 0; i < objectArray.length; i++) {
+            if (!objectToRemove.equals(objectArray[i])){
+                result.add(i);
             }
         }
-        return resultArray;
-
+     return result;
     }
 
     /**
