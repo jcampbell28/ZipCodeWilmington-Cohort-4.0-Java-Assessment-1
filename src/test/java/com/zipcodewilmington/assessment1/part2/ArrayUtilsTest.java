@@ -24,6 +24,7 @@ public class ArrayUtilsTest {
         Assert.assertEquals(expected, actual);
     }
 
+
     @Test
     public void removeValueTest1() {
         // Given
@@ -32,7 +33,7 @@ public class ArrayUtilsTest {
         Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
 
         // When
-        ArrayList<Integer> actual = ArrayUtils.removeValue(inputArray, valueToRemove);
+        Integer[] actual = ArrayUtils.removeValue(inputArray, valueToRemove);
 
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);

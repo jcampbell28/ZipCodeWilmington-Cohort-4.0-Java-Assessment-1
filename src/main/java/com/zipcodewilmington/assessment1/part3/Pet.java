@@ -24,6 +24,7 @@ public abstract class Pet implements Animal {
      */
     public Pet(String name) {
         this.name = name;
+        this.age = 0;
     }
 
 
@@ -31,6 +32,7 @@ public abstract class Pet implements Animal {
      * @param age age of this pet
      */
     public Pet(int age) {
+        this.name = "";
         this.age = age;
     }
 
@@ -46,13 +48,7 @@ public abstract class Pet implements Animal {
     /**
      * @return name of this pet
      */
-//    public setName(String n){
-//
-//        this.name = n;
-//    }
-
-    public String getName() {
-
+    public String getName(){
         return name;
     }
 
@@ -60,13 +56,7 @@ public abstract class Pet implements Animal {
      * @return age of this pet
      */
 
-//    public void setAge(int a){
-//
-//        this.age = a;
-//    }
-
     public Integer getAge() {
-
         return age;
     }
 
@@ -82,7 +72,6 @@ public abstract class Pet implements Animal {
      * @return PetOwner object whose composite `pets` collection contains this Pet instance
      */
     public PetOwner getOwner() {
-
         return this.owner;
     }
 }

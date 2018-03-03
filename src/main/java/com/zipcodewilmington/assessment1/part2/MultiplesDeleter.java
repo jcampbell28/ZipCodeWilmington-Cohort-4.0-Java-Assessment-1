@@ -13,15 +13,13 @@ public class MultiplesDeleter {
      */
     public Integer[] deleteEvens(Integer[] ints) {
         ArrayList<Integer> arrList = new ArrayList<>();
-        for (int i = 1; i < ints.length; i++) {
-            if (i % 2 == 0) {
-                arrList.remove(i);
-            } else {
+        for (int i = 0; i < ints.length; i++) {
+            if (i % 2 != 0) {
                 arrList.add(i);
             }
 
         }
-        return (Integer[]) arrList.toArray();
+        return arrList.toArray(new Integer[0]);
 
     }
 
@@ -32,15 +30,14 @@ public class MultiplesDeleter {
      */
     public Integer[] deleteOdds(Integer[] ints) {
         ArrayList<Integer> arrList = new ArrayList<>();
-        for (int i = 1; i < ints.length; i++) {
-            if (i % 2 == 1) {
-                arrList.remove(i);
-            } else {
+        for (Integer i : ints) {
+            if (i % 2 == 0) {
                 arrList.add(i);
             }
 
         }
-        return (Integer[]) arrList.toArray();
+        return arrList.toArray(new Integer[0]);
+
     }
 
     /**
@@ -50,15 +47,14 @@ public class MultiplesDeleter {
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
         ArrayList<Integer> arrList = new ArrayList<>();
-        for (int i = 1; i < ints.length; i++) {
-            if (i / 3 == 0) {
-                arrList.remove(i);
-            } else {
+        for (Integer i : ints) {
+            if (i % 3 != 0) {
                 arrList.add(i);
             }
 
         }
-        return (Integer[]) arrList.toArray();
+        return arrList.toArray(new Integer[arrList.size()]);
+
     }
 
     /**
@@ -69,14 +65,12 @@ public class MultiplesDeleter {
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
         ArrayList<Integer> arrList = new ArrayList<>();
-        for (int i = 0; i < ints.length; i++) {
-            if (i /multiple == 0) {
-                arrList.remove(i);
-            } else {
+        for (int i : ints) {
+            if (i % multiple != 0) {
                 arrList.add(i);
-            }
 
+            }
         }
-        return (Integer[]) arrList.toArray();
+        return arrList.toArray(new Integer[0]);
     }
 }

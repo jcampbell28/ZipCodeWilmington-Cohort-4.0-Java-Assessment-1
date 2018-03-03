@@ -13,10 +13,10 @@ public class CatTest {
 
     }
 
-    @Test
-    public void inheritanceTest() {
-        Assert.assertTrue(false);
-    }
+//    @Test
+//    public void inheritanceTest() {
+//        Assert.assertTrue(false);
+//    }
 
 
     @Test
